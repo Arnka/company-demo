@@ -5,9 +5,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError }from 'rxjs/operators';
 
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class EmployeeService {
 
   private _url: string = "/assets/data/employees.json";

@@ -3,9 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-department',
   template: `
-    <p>
-      department works!
-    </p>
+    <h1 style="text-align:center;">Department components</h1>
   `,
   styles: [
   ]
