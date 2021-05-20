@@ -8,26 +8,27 @@ import { CountryService } from '../country.service';
     <h2>Employee Detail</h2>
     <h3>{{errorMsg}}</h3>
     <div class="container-fluid">
-      <form>
+      <form *ngFor="let employee of employees">
         <div class="form-group">
           <label>Name</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" [value]="employee.name">
         </div>
 
         <div class="form-group">
           <label>ID</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" [value]="employee.id">
         </div>
 
         <div class="form-group">
           <label>Age</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" [value]="employee.age">
         </div>
 
         <div class="form-group">
           <label>Country</label>
           <select class="form-control">
-            <option *ngFor="let country of countries" [value]="country.name">{{country.name}}</option>
+            <option>{{employee.country}}</option>
+            <option *ngFor="let country of countries">{{country.name}}</option>
           </select>
         </div>
 
@@ -35,9 +36,6 @@ import { CountryService } from '../country.service';
 
       </form>
     </div>
-    <ul *ngFor="let employee of employees">
-      <li>{{employee.id}}. {{employee.name}} - {{employee.age}}</li>
-    </ul>
   `,
   styles: [
   ]
