@@ -5,7 +5,8 @@ import { Component, OnInit } from '@angular/core';
   template: `
   <div style="display: flex; flex-grow: grow; justify-content: space-around;">
     <app-employee-list></app-employee-list>
-    <app-employee-detail></app-employee-detail>
+    <!--<app-employee-detail></app-employee-detail>-->
+   <router-outlet></router-outlet>
   </div>
   `,
   styles: []
